@@ -109,9 +109,18 @@ int main() {
     string initial_direction;
     string commands_str;
 
+	//Input Initial Position
+	cout << "Enter starting position (x y z): ";
 	cin >> starting_position[0] >> starting_position[1] >> starting_position[2];
+	
+	//Input Initial Direction
+	cout << "Enter initial direction (N, S, E, W, Up, Down): ";
 	cin >> initial_direction;
+	
+	//Input Commands
+	cout << "Enter commands (f, b, l, r, u, d): ";
 	cin >> commands_str;
+	
 	vector<char> commands(commands_str.begin(), commands_str.end());
 	vector<int> final_position = executeCommands(starting_position, initial_direction, commands);
     string final_direction = "N"; 
